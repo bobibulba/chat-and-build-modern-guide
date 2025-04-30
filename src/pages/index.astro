@@ -1,0 +1,361 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AnimatedBackground from '../components/AnimatedBackground.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+import ExampleCard from '../components/ExampleCard.astro';
+import FAQItem from '../components/FAQItem.astro';
+---
+
+<Layout title="ChatAndBuild Guide - From Idea to Deployment">
+  <AnimatedBackground />
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="animate-slide-up">Turn Your <span class="text-gradient">Ideas</span> Into Reality</h1>
+      <p class="hero-subtitle animate-slide-up">A comprehensive guide to using ChatAndBuild from zero to deployment</p>
+      <div class="hero-buttons animate-slide-up">
+        <a href="/guide" class="btn btn-primary">Get Started</a>
+        <a href="#examples" class="btn btn-secondary">See Examples</a>
+      </div>
+    </div>
+    <div class="hero-image animate-float">
+      <img src="/images/hero-illustration.svg" alt="ChatAndBuild Illustration" />
+    </div>
+  </section>
+  
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <h2 class="section-title">Why Use <span class="text-gradient">ChatAndBuild</span>?</h2>
+    <div class="grid grid-3">
+      <FeatureCard 
+        title="No Coding Required" 
+        description="Build fully functional applications without writing a single line of code. Just describe what you want."
+        icon="🚀"
+      />
+      <FeatureCard 
+        title="Real-time Development" 
+        description="Watch your application being built in real-time as you refine your requirements."
+        icon="⚡"
+      />
+      <FeatureCard 
+        title="Full Customization" 
+        description="Maintain complete control over your project with the ability to customize every aspect."
+        icon="🎨"
+      />
+      <FeatureCard 
+        title="Modern Tech Stack" 
+        description="Built on the latest technologies to ensure your app is fast, secure, and scalable."
+        icon="🔧"
+      />
+      <FeatureCard 
+        title="One-Click Deployment" 
+        description="Deploy your application to the web with a single click, no complex setup required."
+        icon="🌐"
+      />
+      <FeatureCard 
+        title="Continuous Learning" 
+        description="Learn as you build with explanations of the code and architecture decisions."
+        icon="📚"
+      />
+    </div>
+  </section>
+  
+  <!-- How It Works Section -->
+  <section class="section" id="how-it-works">
+    <h2 class="section-title">How It <span class="text-gradient">Works</span></h2>
+    <div class="steps">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Describe Your Idea</h3>
+          <p>Tell ChatAndBuild what you want to create in plain language. Be as detailed or as vague as you like.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Review & Refine</h3>
+          <p>See your app being built in real-time. Ask for changes, add features, or refine the design.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Deploy & Share</h3>
+          <p>With a single click, deploy your application to the web and share it with the world.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cta-container">
+      <a href="/guide" class="btn btn-primary">View Detailed Guide</a>
+    </div>
+  </section>
+  
+  <!-- Examples Section -->
+  <section class="section" id="examples">
+    <h2 class="section-title">Example <span class="text-gradient">Projects</span></h2>
+    <p class="section-description">Explore what you can build with ChatAndBuild</p>
+    <div class="grid grid-3">
+      <ExampleCard 
+        title="Personal Portfolio" 
+        description="A responsive portfolio website with dark mode, animations, and contact form."
+        image="/images/example-portfolio.jpg"
+        difficulty="beginner"
+        tags={["React", "CSS", "Responsive"]}
+        url="/examples/portfolio"
+      />
+      <ExampleCard 
+        title="Task Management App" 
+        description="A full-stack task manager with user authentication and data persistence."
+        image="/images/example-task-app.jpg"
+        difficulty="intermediate"
+        tags={["React", "Node.js", "Database"]}
+        url="/examples/task-app"
+      />
+      <ExampleCard 
+        title="E-commerce Store" 
+        description="A complete online store with product catalog, cart, and checkout functionality."
+        image="/images/example-ecommerce.jpg"
+        difficulty="advanced"
+        tags={["Next.js", "Stripe", "Authentication"]}
+        url="/examples/ecommerce"
+      />
+    </div>
+    <div class="cta-container">
+      <a href="/examples" class="btn btn-secondary">View All Examples</a>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+    <div class="faq-container">
+      <FAQItem 
+        question="What is ChatAndBuild?" 
+        answer="ChatAndBuild is an AI-powered platform that allows you to create web applications by describing what you want in natural language. It handles the coding, design, and deployment for you."
+      />
+      <FAQItem 
+        question="Do I need coding experience to use ChatAndBuild?" 
+        answer="No, you don't need any coding experience. ChatAndBuild is designed for users of all skill levels, from complete beginners to experienced developers looking to speed up their workflow."
+      />
+      <FAQItem 
+        question="What types of applications can I build?" 
+        answer="You can build a wide range of web applications, including personal websites, portfolios, e-commerce stores, blogs, dashboards, tools, games, and more. If you can describe it, ChatAndBuild can help you build it."
+      />
+      <FAQItem 
+        question="How much does ChatAndBuild cost?" 
+        answer="ChatAndBuild offers various pricing plans, including a free tier for small projects. Check the pricing page for the most up-to-date information on plans and features."
+      />
+      <FAQItem 
+        question="Can I customize the code generated by ChatAndBuild?" 
+        answer="Yes, you have full access to the code generated by ChatAndBuild. You can modify it directly, ask ChatAndBuild to make specific changes, or export it to continue development in your preferred environment."
+      />
+      <FAQItem 
+        question="How do I deploy my application?" 
+        answer="ChatAndBuild offers one-click deployment to various hosting platforms. You can also export your project and deploy it manually to any hosting service that supports your application's technology stack."
+      />
+      <FAQItem 
+        question="Who owns the applications I create?" 
+        answer="You retain full ownership of all applications and code created using ChatAndBuild. You're free to use them for personal or commercial purposes."
+      />
+      <FAQItem 
+        question="Can I collaborate with others on my projects?" 
+        answer="Yes, ChatAndBuild supports team collaboration. You can invite team members to view, edit, and contribute to your projects, making it ideal for team development."
+      />
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Build Your <span class="text-gradient">Dream App</span>?</h2>
+      <p>Start creating with ChatAndBuild today and turn your ideas into reality.</p>
+      <a href="https://www.chatandbuild.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Start Building Now</a>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Add client-side interactivity here
+  document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  /* Hero Section */
+  .hero {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+  
+  .hero-content {
+    flex: 1;
+  }
+  
+  .hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: rgb(var(--muted));
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+  }
+  
+  /* Section Styles */
+  .section {
+    padding: 5rem 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+  
+  .section-description {
+    text-align: center;
+    color: rgb(var(--muted));
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Steps */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 3rem auto;
+  }
+  
+  .step-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  
+  .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background: rgb(var(--primary));
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  
+  .step-content {
+    flex: 1;
+  }
+  
+  .step-content h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .step-content p {
+    color: rgb(var(--muted));
+  }
+  
+  /* CTA Container */
+  .cta-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(rgba(var(--background), 0.8), rgba(var(--background), 0.8)), 
+                url('/images/cta-bg.jpg') center/cover no-repeat;
+    padding: 5rem 0;
+    text-align: center;
+    border-radius: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .cta-content h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+  
+  .cta-content p {
+    color: rgb(var(--muted));
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .hero-buttons {
+      justify-content: center;
+    }
+    
+    .step-item {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+    
+    .step-content {
+      text-align: center;
+    }
+  }
+</style>

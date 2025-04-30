@@ -1,0 +1,122 @@
+---
+interface TroubleshootingItem {
+  problem: string;
+  solution: string;
+  code?: string;
+}
+
+const troubleshootingItems: TroubleshootingItem[] = [
+  {
+    problem: "My app doesn't build correctly",
+    solution: "Check for syntax errors in your code. Make sure all dependencies are properly installed and that your package.json file is correctly configured.",
+    code: `// Example of checking dependencies
+npm list --depth=0
+// Or try reinstalling dependencies
+npm ci`
+  },
+  {
+    problem: "ChatAndBuild doesn't understand my request",
+    solution: "Try breaking down your request into smaller, more specific parts. Use clear language and provide examples of what you're trying to achieve.",
+  },
+  {
+    problem: "My database connection isn't working",
+    solution: "Verify your environment variables are correctly set. Check that your database credentials are valid and that your connection string is properly formatted.",
+    code: `// Example .env file
+DATABASE_URL="postgresql://username:password@localhost:5432/mydb"
+
+// Example connection check
+const { Pool } = require('pg')
+const pool = new Pool()
+pool.query('SELECT NOW()', (err, res) => {
+  console.log(err, res)
+  pool.end()
+})`
+  },
+  {
+    problem: "My API calls are failing",
+    solution: "Check your network tab in developer tools to see the specific error. Ensure you're handling CORS correctly and that your API endpoints are properly configured.",
+    code: `// Example of handling API errors
+fetch('/api/data')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(\`HTTP error! status: \${response.status}\`)
+    }
+    return response.json()
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('Error fetching data:', error))`
+  },
+  {
+    problem: "My deployment is failing",
+    solution: "Check your deployment logs for specific errors. Make sure your build process completes successfully locally before attempting to deploy.",
+  }
+];
+---
+
+<div class="troubleshooting-section">
+  <h2>Common Troubleshooting</h2>
+  
+  <div class="troubleshooting-items">
+    {troubleshootingItems.map((item) => (
+      <div class="troubleshooting-item">
+        <h3 class="problem">{item.problem}</h3>
+        <div class="solution">
+          <p>{item.solution}</p>
+          {item.code && (
+            <pre><code>{item.code}</code></pre>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .troubleshooting-section {
+    margin: 4rem 0;
+  }
+  
+  .troubleshooting-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .troubleshooting-item {
+    background: rgb(var(--card));
+    border-radius: 0.75rem;
+    border: 1px solid rgb(var(--border));
+    overflow: hidden;
+  }
+  
+  .problem {
+    padding: 1.25rem;
+    margin: 0;
+    background: rgba(var(--primary), 0.1);
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgb(var(--border));
+  }
+  
+  .solution {
+    padding: 1.25rem;
+  }
+  
+  .solution p {
+    margin-top: 0;
+  }
+  
+  pre {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1rem 0 0;
+  }
+  
+  code {
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: rgb(var(--foreground));
+  }
+</style>

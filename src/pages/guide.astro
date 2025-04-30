@@ -1,0 +1,554 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AnimatedBackground from '../components/AnimatedBackground.astro';
+import StepByStepGuide from '../components/StepByStepGuide.astro';
+import TroubleshootingSection from '../components/TroubleshootingSection.astro';
+---
+
+<Layout title="ChatAndBuild Guide - Comprehensive Tutorial">
+  <AnimatedBackground />
+  
+  <div class="guide-container">
+    <header class="guide-header">
+      <h1>ChatAndBuild <span class="text-gradient">Guide</span></h1>
+      <p class="guide-subtitle">A comprehensive tutorial from zero to deployment</p>
+    </header>
+    
+    <nav class="guide-nav">
+      <ul>
+        <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#step-by-step">Step-by-Step</a></li>
+        <li><a href="#best-practices">Best Practices</a></li>
+        <li><a href="#advanced-techniques">Advanced Techniques</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+      </ul>
+    </nav>
+    
+    <section id="getting-started" class="guide-section">
+      <h2>Getting Started with ChatAndBuild</h2>
+      
+      <div class="guide-content">
+        <p>
+          ChatAndBuild is an AI-powered platform that allows you to create web applications by describing what you want in natural language. Whether you're a complete beginner with no coding experience or an experienced developer looking to speed up your workflow, ChatAndBuild can help you turn your ideas into reality.
+        </p>
+        
+        <div class="info-box">
+          <h3>What You'll Need</h3>
+          <ul>
+            <li>A ChatAndBuild account (sign up at <a href="https://www.chatandbuild.com" target="_blank" rel="noopener noreferrer">chatandbuild.com</a>)</li>
+            <li>A clear idea of what you want to build</li>
+            <li>Basic understanding of web concepts (helpful but not required)</li>
+          </ul>
+        </div>
+        
+        <h3>Understanding the Interface</h3>
+        <p>
+          When you first log in to ChatAndBuild, you'll see a clean, intuitive interface designed to make app creation as simple as possible:
+        </p>
+        
+        <div class="grid grid-2">
+          <div class="feature-item">
+            <h4>Chat Interface</h4>
+            <p>This is where you'll communicate with the AI. Describe your project, ask questions, and request changes here.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Preview Panel</h4>
+            <p>See your application in real-time as it's being built. The preview updates automatically as changes are made.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Code Editor</h4>
+            <p>View and edit the generated code directly. Changes you make will be reflected in the preview.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Project Manager</h4>
+            <p>Manage your project files, assets, and settings from this panel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="step-by-step" class="guide-section">
+      <h2>Step-by-Step Guide</h2>
+      
+      <div class="guide-content">
+        <p>
+          Follow these steps to create your first application with ChatAndBuild:
+        </p>
+        
+        <StepByStepGuide />
+        
+        <div class="example-prompt">
+          <h3>Example Prompt</h3>
+          <div class="prompt-box">
+            <p>"I want to create a personal portfolio website with a dark theme. It should have sections for About Me, Projects, Skills, and Contact. For the Projects section, I want to showcase 3 projects with images, descriptions, and links. The site should be responsive and have smooth animations when scrolling."</p>
+          </div>
+          <p class="prompt-tip">This prompt is specific about the type of application, design preferences, content sections, and desired features.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="best-practices" class="guide-section">
+      <h2>Best Practices</h2>
+      
+      <div class="guide-content">
+        <div class="practices-grid">
+          <div class="practice-item">
+            <h3>Be Specific</h3>
+            <p>The more specific your description, the better ChatAndBuild can match your vision. Include details about functionality, design, and user experience.</p>
+          </div>
+          
+          <div class="practice-item">
+            <h3>Start Simple, Then Expand</h3>
+            <p>Begin with a basic version of your app and gradually add more complex features. This approach makes it easier to identify and fix issues.</p>
+          </div>
+          
+          <div class="practice-item">
+            <h3>Use References</h3>
+            <p>Mention existing websites or apps that have elements you like. For example, "I want a navigation menu similar to Airbnb's."</p>
+          </div>
+          
+          <div class="practice-item">
+            <h3>Ask for Explanations</h3>
+            <p>If you don't understand something about the generated code or implementation, ask ChatAndBuild to explain it. This is a great way to learn as you build.</p>
+          </div>
+          
+          <div class="practice-item">
+            <h3>Test Thoroughly</h3>
+            <p>Test all features of your application in the preview before deploying. Check different screen sizes to ensure responsiveness.</p>
+          </div>
+          
+          <div class="practice-item">
+            <h3>Save Versions</h3>
+            <p>Use the version history feature to save important milestones in your project. This allows you to revert changes if needed.</p>
+          </div>
+        </div>
+        
+        <div class="dos-donts">
+          <div class="dos">
+            <h3>Do's</h3>
+            <ul>
+              <li>Break down complex requests into smaller parts</li>
+              <li>Provide visual references when possible</li>
+              <li>Specify technologies if you have preferences</li>
+              <li>Ask for optimizations and best practices</li>
+              <li>Request code explanations to learn</li>
+            </ul>
+          </div>
+          
+          <div class="donts">
+            <h3>Don'ts</h3>
+            <ul>
+              <li>Be too vague ("Make me a cool website")</li>
+              <li>Request illegal or harmful applications</li>
+              <li>Expect perfect results without refinement</li>
+              <li>Ignore error messages and warnings</li>
+              <li>Make too many changes at once</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="advanced-techniques" class="guide-section">
+      <h2>Advanced Techniques</h2>
+      
+      <div class="guide-content">
+        <p>
+          Once you're comfortable with the basics, try these advanced techniques to get even more from ChatAndBuild:
+        </p>
+        
+        <div class="technique-list">
+          <div class="technique">
+            <h3>Custom API Integration</h3>
+            <p>
+              Connect your application to external APIs to extend its functionality. For example, you could integrate with weather APIs, payment processors, or social media platforms.
+            </p>
+            <div class="code-example">
+              <pre><code>// Example prompt:
+"I want to integrate the OpenWeatherMap API to display current weather 
+based on the user's location. The weather should update automatically 
+every hour and show temperature, conditions, and a forecast for the next 3 days."</code></pre>
+            </div>
+          </div>
+          
+          <div class="technique">
+            <h3>Database Design</h3>
+            <p>
+              For applications that need to store data, you can ask ChatAndBuild to design and implement a database schema. Specify the types of data you need to store and the relationships between them.
+            </p>
+            <div class="code-example">
+              <pre><code>// Example prompt:
+"I need a database for my e-commerce application with tables for products, 
+categories, users, orders, and reviews. Products should belong to categories, 
+users should be able to place orders containing multiple products, and users 
+should be able to leave reviews on products they've purchased."</code></pre>
+            </div>
+          </div>
+          
+          <div class="technique">
+            <h3>Authentication Systems</h3>
+            <p>
+              Implement user authentication to allow users to register, log in, and access protected content. ChatAndBuild can set up secure authentication systems with features like password reset and email verification.
+            </p>
+            <div class="code-example">
+              <pre><code>// Example prompt:
+"Add user authentication to my application with email and password login. 
+Include features for registration, login, logout, password reset, and 
+account settings. Also implement role-based access control with admin 
+and regular user roles."</code></pre>
+            </div>
+          </div>
+          
+          <div class="technique">
+            <h3>Performance Optimization</h3>
+            <p>
+              Ask ChatAndBuild to optimize your application for performance. This can include code splitting, lazy loading, caching strategies, and other techniques to make your app faster and more efficient.
+            </p>
+            <div class="code-example">
+              <pre><code>// Example prompt:
+"Optimize my application for performance. Implement code splitting for 
+the JavaScript bundles, add lazy loading for images, set up a service 
+worker for offline support, and implement caching for API responses."</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="troubleshooting" class="guide-section">
+      <h2>Troubleshooting</h2>
+      
+      <div class="guide-content">
+        <p>
+          Even with AI assistance, you might encounter issues during development. Here's how to troubleshoot common problems:
+        </p>
+        
+        <TroubleshootingSection />
+        
+        <div class="support-info">
+          <h3>Getting Additional Support</h3>
+          <p>
+            If you're still experiencing issues, you can:
+          </p>
+          <ul>
+            <li>Check the <a href="/faq">FAQ section</a> for common questions</li>
+            <li>Join the <a href="https://discord.gg/chatandbuild" target="_blank" rel="noopener noreferrer">ChatAndBuild Discord community</a> to connect with other users</li>
+            <li>Contact support directly at <a href="mailto:support@chatandbuild.com">support@chatandbuild.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <div class="next-steps">
+      <h2>Ready to Start Building?</h2>
+      <p>Now that you understand how to use ChatAndBuild, it's time to create your first project!</p>
+      <div class="next-buttons">
+        <a href="https://www.chatandbuild.com/new" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Start a New Project</a>
+        <a href="/examples" class="btn btn-secondary">Browse Examples</a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  // Add active class to current section in navigation
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.guide-section');
+    const navLinks = document.querySelectorAll('.guide-nav a');
+    
+    // Smooth scrolling for anchor links
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Highlight active section in nav
+    window.addEventListener('scroll', () => {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop - 200) {
+          current = '#' + section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .guide-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .guide-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .guide-subtitle {
+    color: rgb(var(--muted));
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .guide-nav {
+    position: sticky;
+    top: 0;
+    background: rgba(var(--background), 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    z-index: 10;
+    border-radius: 0.5rem;
+  }
+  
+  .guide-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+  
+  .guide-nav a {
+    color: rgb(var(--foreground));
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+  }
+  
+  .guide-nav a:hover, .guide-nav a.active {
+    background: rgba(var(--primary), 0.1);
+    color: rgb(var(--primary));
+  }
+  
+  .guide-section {
+    margin-bottom: 4rem;
+    scroll-margin-top: 100px;
+  }
+  
+  .guide-section h2 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgb(var(--border));
+  }
+  
+  .guide-content {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+  
+  .info-box {
+    background: rgba(var(--primary), 0.05);
+    border-left: 4px solid rgb(var(--primary));
+    padding: 1.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin: 2rem 0;
+  }
+  
+  .info-box h3 {
+    margin-top: 0;
+    color: rgb(var(--primary));
+  }
+  
+  .info-box ul {
+    margin-bottom: 0;
+  }
+  
+  .feature-item {
+    background: rgb(var(--card));
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgb(var(--border));
+  }
+  
+  .feature-item h4 {
+    margin-top: 0;
+    color: rgb(var(--primary));
+  }
+  
+  .feature-item p {
+    margin-bottom: 0;
+  }
+  
+  .example-prompt {
+    margin: 2rem 0;
+    background: rgb(var(--card));
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgb(var(--border));
+  }
+  
+  .example-prompt h3 {
+    margin-top: 0;
+  }
+  
+  .prompt-box {
+    background: rgba(var(--background), 0.5);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    border: 1px solid rgb(var(--border));
+  }
+  
+  .prompt-box p {
+    margin: 0;
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+  }
+  
+  .prompt-tip {
+    color: rgb(var(--muted));
+    font-style: italic;
+  }
+  
+  .practices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .practice-item {
+    background: rgb(var(--card));
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgb(var(--border));
+  }
+  
+  .practice-item h3 {
+    margin-top: 0;
+    color: rgb(var(--primary));
+  }
+  
+  .practice-item p {
+    margin-bottom: 0;
+  }
+  
+  .dos-donts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .dos, .donts {
+    background: rgb(var(--card));
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgb(var(--border));
+  }
+  
+  .dos h3 {
+    color: rgb(34, 197, 94);
+  }
+  
+  .donts h3 {
+    color: rgb(239, 68, 68);
+  }
+  
+  .technique-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .technique {
+    background: rgb(var(--card));
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgb(var(--border));
+  }
+  
+  .technique h3 {
+    margin-top: 0;
+    color: rgb(var(--primary));
+  }
+  
+  .code-example {
+    background: rgba(var(--background), 0.5);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    overflow-x: auto;
+  }
+  
+  .code-example pre {
+    margin: 0;
+  }
+  
+  .code-example code {
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+  }
+  
+  .support-info {
+    background: rgba(var(--primary), 0.05);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin-top: 2rem;
+  }
+  
+  .support-info h3 {
+    margin-top: 0;
+    color: rgb(var(--primary));
+  }
+  
+  .next-steps {
+    text-align: center;
+    background: rgb(var(--card));
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 1px solid rgb(var(--border));
+    margin-top: 4rem;
+  }
+  
+  .next-steps h2 {
+    margin-top: 0;
+  }
+  
+  .next-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  @media (max-width: 768px) {
+    .dos-donts {
+      grid-template-columns: 1fr;
+    }
+    
+    .guide-nav ul {
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
+  }
+</style>

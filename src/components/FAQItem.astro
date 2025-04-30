@@ -1,0 +1,96 @@
+---
+interface Props {
+  question: string;
+  answer: string;
+}
+
+const { question, answer } = Astro.props;
+---
+
+<div class="faq-item">
+  <button class="faq-question">
+    <span>{question}</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </button>
+  <div class="faq-answer">
+    <p>{answer}</p>
+  </div>
+</div>
+
+<script>
+  // Add click event to all FAQ questions
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const item = question.parentElement;
+      const isOpen = item.classList.contains('open');
+      
+      // Close all items
+      document.querySelectorAll('.faq-item').forEach(faqItem => {
+        faqItem.classList.remove('open');
+      });
+      
+      // If the clicked item wasn't open, open it
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    });
+  });
+</script>
+
+<style>
+  .faq-item {
+    border: 1px solid rgb(var(--border));
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background: rgb(var(--card));
+    transition: all 0.3s ease;
+  }
+  
+  .faq-item:hover {
+    border-color: rgba(var(--primary), 0.5);
+  }
+  
+  .faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgb(var(--foreground));
+    text-align: left;
+  }
+  
+  .chevron {
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+  
+  .faq-answer p {
+    padding: 0 1.25rem;
+    margin: 0;
+    color: rgb(var(--muted));
+  }
+  
+  .faq-item.open .chevron {
+    transform: rotate(180deg);
+  }
+  
+  .faq-item.open .faq-answer {
+    max-height: 500px;
+    padding-bottom: 1.25rem;
+  }
+</style>

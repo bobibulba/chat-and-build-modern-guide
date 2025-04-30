@@ -1,0 +1,168 @@
+---
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>ChatAndBuild <span class="text-gradient">Guide</span></h3>
+        <p>From idea to deployment in minutes</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/guide">Guide</a></li>
+            <li><a href="/examples">Examples</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="https://github.com/chatandbuild" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://twitter.com/chatandbuild" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="https://discord.gg/chatandbuild" target="_blank" rel="noopener noreferrer">Discord</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} ChatAndBuild. All rights reserved.</p>
+      <p>
+        <a href="/guide" class="guide-link">
+          <span class="guide-icon">📚</span>
+          <span>ChatAndBuild Guide</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: rgba(var(--card), 0.5);
+    border-top: 1px solid rgb(var(--border));
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-logo {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-logo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-logo p {
+    color: rgb(var(--muted));
+  }
+  
+  .footer-links {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  .footer-section h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--foreground));
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section a {
+    color: rgb(var(--muted));
+    transition: color 0.2s ease;
+  }
+  
+  .footer-section a:hover {
+    color: rgb(var(--foreground));
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(var(--border), 0.5);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .footer-bottom p {
+    color: rgb(var(--muted));
+    margin: 0;
+  }
+  
+  .guide-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(var(--primary), 0.1);
+    border-radius: 2rem;
+    transition: all 0.2s ease;
+  }
+  
+  .guide-link:hover {
+    background: rgba(var(--primary), 0.2);
+    text-decoration: none;
+  }
+  
+  .guide-icon {
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .footer-links {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
